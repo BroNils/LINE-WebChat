@@ -16,6 +16,7 @@ PAGES
     - [Linux](#linux-installation)
     - [Termux](#linux-installation)
 - [How to run](#how-to-run)
+- [Guide](#guide)
 
 
 ## What is LINE WebChat ?
@@ -34,7 +35,7 @@ LINE WebChat is a modified *LINE Messaging App* based on web platform.
 - Chatting
     - Square Chat
     - Person Chat
-    - SendImage
+    - SendImage<br>
 If you have an idea for new feature, you can contact [me](http://line.me/ti/p/MB6mnZWbu_).
 
 ## Requirement
@@ -65,3 +66,7 @@ $ npm i
 
 - On windows you just open *start.bat*.
 - On linux you just open *start.sh*.
+
+## Guide
+
+- How to access the main chat ?. simple, just go to *http://127.0.0.1/*.
