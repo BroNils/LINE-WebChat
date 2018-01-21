@@ -13,7 +13,7 @@ PAGES
     - [Windows](#windows-installation)
     - [Linux](#linux-installation)
     - [Termux](#linux-installation)
-- [How To Use ?](#how-to-use-)
+- [How to run](#how-to-run)
 
 
 ## What is LINE WebChat ?
@@ -44,7 +44,7 @@ $ cd LINE-WebChat
 $ npm i
 ```
 
-## How To Use ?
+## How to run
 
 - On windows you just open *start.bat*.
 - On linux you just open *start.sh*.
