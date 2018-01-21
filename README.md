@@ -35,7 +35,9 @@ LINE WebChat is a modified *LINE Messaging App* based on web platform.
 - Chatting
     - Square Chat
     - Person Chat
-    - SendImage<br>
+    - SendImage
+
+<br><br>
 If you have an idea for new feature, you can contact [me](http://line.me/ti/p/MB6mnZWbu_).
 
 ## Requirement
