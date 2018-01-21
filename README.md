@@ -8,6 +8,8 @@ PAGES
 =====
 
 - [What is LINE WebChat ?](#what-is-line-webchat-)
+    - [Features](#features)
+    - [Upcoming Feature](#upcoming-update)
 - [Requirement](#requirement)
 - [Installation](#)
     - [Windows](#windows-installation)
@@ -19,6 +21,21 @@ PAGES
 ## What is LINE WebChat ?
 
 LINE WebChat is a modified *LINE Messaging App* based on web platform.
+
+## Features
+
+- Chatting
+    - Group Chat
+    - Chat Notification
+- Console
+
+## Upcoming Update
+
+- Chatting
+    - Square Chat
+    - Person Chat
+    - SendImage
+If you have an idea for new feature, you can contact [me](http://line.me/ti/p/MB6mnZWbu_).
 
 ## Requirement
 
