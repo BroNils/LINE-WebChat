@@ -76,8 +76,8 @@ function ambilKata(params, kata1, kata2){
 
 function checkUpdate(){
 	unirest.get(config.raw_repo+'version.txt').end(function(data){
-		if(config.version != parseInt(data.body)){
-			console.info('There are new version of LINE WebChat here -> '+config.repo+' ('+parseInt(data.body)+')')
+		if(config.version != parseFloat(data.body)){
+			console.info('There are new version of LINE WebChat here -> '+config.repo+' ('+parseFloat(data.body)+')')
 		}else{
 			console.info('You are currently using the latest version ! ^_^')
 		}
