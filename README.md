@@ -7,13 +7,13 @@ LINE Messaging Web Platform
 PAGES
 =====
 
-- [What is LINE WebChat ?](#What is LINE WebChat ?)
-- [Requirement](#Requirement)
+- [What is LINE WebChat ?](#what-is-line-webchat-)
+- [Requirement](#requirement)
 - [Installation](#)
-    - [Windows](#Windows Installation)
-    - [Linux](#Linux Installation)
-    - [Termux](#Linux Installation)
-- [How To Use ?](#How To Use ?)
+    - [Windows](#windows-installation)
+    - [Linux](#linux-installation)
+    - [Termux](#linux-installation)
+- [How To Use ?](#how-to-use-)
 
 
 ## What is LINE WebChat ?
