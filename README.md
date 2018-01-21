@@ -47,4 +47,4 @@ $ npm i
 ## How To Use ?
 
 - On windows you just open *start.bat*.
-- On linux you can start it from bash using this cmd ```$ cd LINE-WebChat && npm i```.
+- On linux you just open *start.sh*.
