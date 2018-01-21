@@ -17,17 +17,14 @@ PAGES
 
 
 ## What is LINE WebChat ?
-======================
 
 LINE WebChat is a modified *LINE Messaging App* based on web platform.
 
 ## Requirement
-===========
 
 This repo is require a [NodeJS](https://nodejs.org/) >= 8.0.0.
 
 ## Windows Installation
-====================
 
 First of all, you need to install [Git](https://git-scm.com/download/win) & [NodeJS](https://nodejs.org/). Then open your git bash, and follow this:<br>
 ```sh
@@ -37,7 +34,6 @@ $ npm i
 ```
 
 ## Linux Installation
-==================
 
 ```sh
 $ sudo apt-get update
@@ -49,7 +45,6 @@ $ npm i
 ```
 
 ## How To Use ?
-============
 
 - On windows you just open *start.bat*.
 - On linux you can start it from bash using this cmd ```$ cd LINE-WebChat && npm i```.
