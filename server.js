@@ -494,6 +494,9 @@ function arrangeOp(xdomain,operations){
 		msg.type = operations.type;
 		msg.person = operations.param2;
 		msg.person2 = operations.param3;
+		console.info(operations.type+msg.person+msg.person2);
+		//let xarr = new Array();
+		if(msg.person && msg.person2 && msg.person != null && msg.person2 != null){
 		Tcustom.talkservice.getContacts([msg.person,msg.person2],(err,s)=>{
 			msg.personName = unicodeEscape(s[0].displayName);
 			msg.personName2 = unicodeEscape(s[1].displayName);
@@ -525,7 +528,7 @@ function arrangeOp(xdomain,operations){
 					console.info("saved");
 				})
 			}
-		})
+		})}
 	}else if(operations.type == 60 || operations.type == 15 || operations.type == 17){
 		msg = new TTypes.Message();
 		msg.type = operations.type;
