@@ -28,6 +28,9 @@ LINE WebChat is a modified *LINE Messaging App* based on web platform.
 - Chatting
     - Group Chat
     - Chat Notification
+- Authentication
+    - Login with QR
+    - Login with authToken
 - Console
 
 ## Upcoming Update
@@ -36,6 +39,8 @@ LINE WebChat is a modified *LINE Messaging App* based on web platform.
     - Square Chat
     - Person Chat
     - SendImage
+- Authentication
+    - Login with email & pass
 
 <br><br>
 If you have an idea for new feature, you can contact [me](http://line.me/ti/p/MB6mnZWbu_).
