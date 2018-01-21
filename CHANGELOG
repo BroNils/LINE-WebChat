@@ -3,3 +3,7 @@
 1.1:
 
 - Bug fix (getContacts)
+
+2.0:
+
+- Bug fix (version check)
