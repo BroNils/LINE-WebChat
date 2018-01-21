@@ -42,7 +42,7 @@ If you have an idea for new feature, you can contact [me](http://line.me/ti/p/MB
 
 ## Requirement
 
-This repo is require a [NodeJS](https://nodejs.org/) >= 8.0.0.
+This repo require a [NodeJS](https://nodejs.org/) >= 8.0.0.
 
 ## Windows Installation
 
