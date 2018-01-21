@@ -1,5 +1,5 @@
 # ![LINE](./small.png) LINE WebChat
-[![NPM](https://img.shields.io/badge/npm-%3E=%205.5.0-blue.svg)](https://nodejs.org/) [![Node](https://img.shields.io/badge/node-%3E=%208.0.0-brightgreen.svg)](https://nodejs.org/) [![AUR](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/GoogleX133/LINE-WebChat/blob/master/LICENSE)<br><br>
+[![NPM](https://img.shields.io/badge/npm-%3E=%205.5.0-blue.svg)](https://nodejs.org/) [![Node](https://img.shields.io/badge/node-%3E=%208.0.0-brightgreen.svg)](https://nodejs.org/) [![AUR](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/GoogleX133/LINE-WebChat/blob/master/LICENSE) [![LINE](https://img.shields.io/badge/line-%207.18-brightgreen.svg)]()[![Contact Me](https://img.shields.io/badge/chat-on%20line-1bacbc.svg)](http://line.me/ti/p/MB6mnZWbu_)<br><br>
 LINE Messaging Web Platform
 
 ----
