@@ -69,4 +69,5 @@ $ npm i
 
 ## Guide
 
-- How to access the main chat ?. simple, just go to *http://127.0.0.1/*.
+- How to access the main chat page ?. simple, just go to *http://127.0.0.1/*.
+- How to access the console ?. go to *http://127.0.0.1/console*.
