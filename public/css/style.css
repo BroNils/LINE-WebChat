@@ -1,0 +1,803 @@
+/*--
+    Author: W3layouts
+    Author URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+
+
+/*-- Reset Code --*/
+
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+    article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+    ol,ul{list-style:none;padding:0;margin:0;}
+    blockquote,q{quotes:none;}
+    blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+    table{border-collapse:collapse;border-spacing:0;}
+    /* start editing from here */
+    a{text-decoration:none;}
+    .txt-rt{text-align:right;}/* text align right */
+    .txt-lt{text-align:left;}/* text align left */
+    .txt-center{text-align:center;}/* text align center */
+    .float-rt{float:right;}/* float right */
+    .float-lt{float:left;}/* float left */
+    .clear{clear:both;}/* clear float */
+    .pos-relative{position:relative;}/* Position Relative */
+    .pos-absolute{position:absolute;}/* Position Absolute */
+    .vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+    .vertical-top{	vertical-align:top;}/* vertical align top */
+    .underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+    nav.vertical ul li{	display:block;}/* vertical menu */
+    nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+    img{max-width:100%;}
+    /*img[width],img[height]{width:auto;height:auto;} wordpress hack to reset the attributes (while making responsive) */
+
+/*-- Reset Code --*/
+
+
+
+
+
+/*-- Index-Page-Styling --*/
+
+body {
+    background: #24bc1b;/*#701bbc;*//*#1BBC9B;*/
+    font:12px "Open Sans", sans-serif;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 70px 0;
+    color: #FFF;
+}
+
+#chatbox {
+	border-radius: 25px;
+    width: 290px;
+    background: #000;
+    overflow: hidden;
+    height: 484px;
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    margin-left: -155px;
+}
+
+#friendslist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 484px;
+}
+
+#topmenu {
+    height: 50px;
+    width: 290px;
+    text-align: center;
+    padding-top: 20px;
+    border-bottom: 1px solid #777;
+}
+
+span.friends {
+    font-size: 25px;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.friend {
+    height: 70px;
+    border-bottom: 1px solid #777;
+    position: relative;
+}
+
+.friend:hover {
+    background: #333;
+    cursor: pointer;
+}
+
+.friend img {
+    width: 40px;
+    border-radius: 50%;
+    margin: 15px;
+    float: left;
+}
+
+.floatingImg {
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 12px;
+    border: 3px solid #fff;
+	-webkit-transition: border 2s ease;
+    -moz-transition: border s ease;
+    -o-transition: border 2s ease;
+    transition: border 2s ease;
+}
+
+.friend p {
+    padding: 15px 0 0 0;
+    float: left;
+    width: 220px;
+}
+
+.friend p strong {
+    font-weight: 600;
+    font-size: 15px;
+    color: #CCC;
+}
+
+.friend p span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+}
+
+.friend .status {
+    background: #4CAF50;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 31px;
+    right: 17px;
+}
+
+.friend .status.away {
+    background: #FFEB3B;
+}
+
+.friend .status.inactive {
+    background: #EEE;
+}
+
+#search {
+	border-radius: 0px;
+    background: #333 url("../images/search.png") -11px 0 no-repeat;
+    height: 60px;
+    width: 290px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#searchfield {
+    background: #333;
+    margin: 21px 0 0 55px;
+    border: none;
+    padding: 0;
+    font-size:1 4px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: #CCC;
+}
+
+#searchfield:focus {
+    outline: 0;
+}
+
+#chatview {
+    width: 290px;
+    height: 484px;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    display: none;
+    background: #000;
+}
+
+#profile {
+    height: 153px;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+.p1 #profile {
+    background: url("../images/bg.jpg") 0 0 no-repeat;
+}
+
+#profile .avatar {
+    /*--w3layouts--*/
+    /*--agileits--*/
+    width: 68px;
+    border: 3px solid #fff;
+    margin: 23px 0 0;
+    border-radius: 50%;
+}
+
+#profile p {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 118px 0 -1px;
+    opacity: 0;
+    -webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000); 
+}
+
+#profile p.animate {
+    margin-top: 97px;
+    opacity: 1;
+    -webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000); 
+}
+
+#profile span {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#chat-messages {
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+    opacity: 0;
+    margin-top: 30px;
+    width: 290px;
+    height: 270px;
+    overflow-y: scroll;  
+    overflow-x: hidden;
+    padding-right: 20px;
+    -webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+}
+
+/*--w3layouts--*/
+/*--agileits--*/
+#chat-messages.animate {
+    opacity: 1;
+    margin-top: 0;
+}
+
+#chat-messages label {
+    color: #777;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    margin: 15px 0;
+    width: 290px;
+    display: block; 
+	margin-top: -30px;
+    margin-bottom: 45px;
+}
+
+#chat-messages div.message {
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+    padding: 0 0 30px 58px;
+    clear: both;
+    margin-bottom: 45px;
+}
+
+#chat-messages div.message.right {
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+    padding: 0 58px 30px 0;
+    margin-right: -19px;
+    margin-left: 19px;
+}
+
+#chat-messages .message img {
+    float: left;
+    margin-left: -38px;
+    border-radius: 50%;
+    width: 30px;
+    margin-top: 12px;
+}
+
+#chat-messages div.message.right img {
+    float: right;
+    margin-left: 0;
+    margin-right: -38px;
+}
+
+/*.message .bubble {
+	text-overflow: ellipsis;
+    word-wrap: break-word;
+    background: #333;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 13px;
+    border-radius: 5px;
+    color: #CCC;
+    position: relative;
+    float: left;
+}*/
+
+.message .bubble {
+	word-wrap: break-word;
+	color: #CCC;
+	position: relative;
+padding: 12px 13px;
+background: #333;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+/*.message .bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 5px 9px 5px 0;
+border-color: transparent #333;
+display: block;
+width: 0;
+z-index: 1;
+left: -9px;
+top: 26px;
+}*/
+
+
+/*#chat-messages div.message.right .bubble {
+	text-overflow: ellipsis;
+    float: right;
+    border-radius: 5px 5px 0px 5px ;
+    word-wrap: break-word;
+}*/
+
+#chat-messages div.message.right .bubble {
+word-wrap: break-word;
+	color: #CCC;
+	position: relative;
+padding: 12px 13px;
+background: #333;
+-webkit-border-radius: 5px 5px 0px 5px;
+-moz-border-radius: 5px 5px 0px 5px;
+border-radius: 5px 5px 0px 5px;
+}
+
+/*.message.right .bubble :after{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 5px 0 5px 9px;
+border-color: transparent #333;
+display: block;
+width: 0;
+z-index: 1;
+right: -9px;
+top: 26px;
+}*/
+
+.nameright {
+	color: #FFF;
+    font-size: 11px;
+    position: absolute;
+    right: 0;
+    top: -22px;
+}
+
+.nameleft {
+	color: #777;
+    font-size: 11px;
+    position: absolute;
+    left: 0;
+    top: -22px;
+}
+
+.spanleft {
+    color: #777;
+    font-size: 11px;
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+}
+
+.spanright {
+    color: #777;
+    font-size: 11px;
+    position: absolute;
+    right: 0;
+    bottom: -22px;
+}
+
+#sendmessage {
+    height: 60px;
+    border-top: 1px solid #e7ebee;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    width: 290px;
+    background: #333;
+    padding-bottm: 50px;
+}
+
+#sendmessage input {
+    background: #333;
+    margin: 21px 0 0 21px;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400px;
+    color: #aab8c2;
+}
+
+#sendmessage input:focus {
+    outline: 0;
+}
+
+#sendmessage button {
+    background: url("../images/send.png") 0 0 no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    /*--w3layouts--*/
+    /*--agileits--*/
+    right: 15px;
+    top: 23px;
+    border: none;
+}
+
+#sendmessage button:hover {
+    cursor: pointer;
+}
+
+#sendmessage button:focus {
+    outline: 0;
+}
+
+#close {
+    position: absolute;
+    top: 8px;
+    opacity: 0.8;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#close:hover {
+    opacity: 1;
+}
+
+.cx, .cy {
+    background: #fff;
+    position: absolute;
+    width: 0px;
+    top: 15px;
+    right: 15px;
+    height: 3px;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+.cx.s1, .cy.s1 {
+    right: 0;
+    width: 20px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cy.s2 {
+    -ms-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cy.s3 {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cx.s1 {
+    right: 0;
+    width: 20px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cx.s2 {
+    -ms-transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cx.s3 {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: all 100ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#chatview, #sendmessage {
+    overflow: hidden;
+}
+
+.footer {
+    position: relative;
+    text-align: center;
+}
+
+.footer p {
+    color: #FFF;
+    position: absolute;
+    top: 550px;
+    left: 34%;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+.footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #000;
+}
+
+/*-- //Index-Page-Styling --*/
+
+
+
+
+
+/*--- Responsive-Code ---*/
+
+@media screen and (max-width: 1920px) {
+    .footer p {
+        left: 36%;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .footer p {
+        left: 34%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .footer p {
+        left: 33%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .footer p {
+        left: 32%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .footer p {
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .footer p {
+        left: 29%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        margin: 50px 0;
+    }
+    #chatbox {
+        top: 150px;
+    }
+    .footer p {
+        left: 23%;
+        top: 550px;
+    }
+}
+
+@media screen and (max-width: 966px) {
+    .footer p {
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer p {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 853px) {
+    .footer p {
+        left: 18%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer p {
+        left: 16%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    h1 {
+        font-size: 35px;
+    }
+    .footer p {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .footer p {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer p {
+        left: 8%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer p {
+        left: 7%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    h1 {
+        font-size: 33px;
+    }
+    #chatbox {
+        left: 52%;
+    }
+    .footer p {
+        left: 3%;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    .footer p {
+        left: 2%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+    .footer p {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #chatbox {
+        left: 53%;
+    }
+}
+
+/*PULSE*/
+#container {
+  margin-top: 20px;
+  margin-left: 30px;
+  position: relative;
+  background: #45453f;
+}
+
+.pulse {
+  width: 10px;
+  height: 10px;
+  border: 5px solid #f7f14c;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #716f42;
+  z-index: 10;
+  position: absolute;
+}
+
+.dot {
+  border: 10px solid #fff601;
+  background: transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: pulse 3s ease-out;
+  -moz-animation: pulse 3s ease-out;
+  animation: pulse 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  z-index: 1;
+  opacity: 0;
+}
+
+@-moz-keyframes pulse {
+ 0% {
+    -moz-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -moz-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -moz-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -moz-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -moz-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@-webkit-keyframes "pulse" {
+ 0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -webkit-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+/*--- //Responsive-Code ---*/

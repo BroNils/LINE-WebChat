@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--<script>
+alert("Please login with your generated qr");
+</script>-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Line Webchat</title>
+    <link rel="stylesheet" type="text/css" href="/css/flatstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+	  <center><img src="<%= qrimgfile %>"></center>
+        <form action="/confirmlogin/qr" method="post">
+          <input value="<%= linkqr %>" name="qr" type="text" class="ghost-input" readonly required>
+          <input type="submit" class="ghost-button" value="Login">
+        </form>
+		<p>Info: Login in 2 minutes</p>
+      </fieldset>
+    </div>
+  </body>
+</html>

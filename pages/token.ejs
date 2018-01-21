@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--<script>
+alert("Please login with your generated qr");
+</script>-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Line Webchat</title>
+    <link rel="stylesheet" type="text/css" href="/css/flatstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+	  <center><img src="../images/line.png" height="205" width="205"></center>
+        <form action="/confirmlogin/token" method="post">
+          <input name="token" type="text" class="ghost-input" placeholder="paste your authToken here" required>
+		  <input name="cert" type="text" class="ghost-input" placeholder="paste your certificate here" title="optional">
+          <input type="submit" class="ghost-button" value="Login">
+        </form>
+		<p>Info: Insert your authToken to login !</p>
+      </fieldset>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang='en' class=''>
+<head>
+<meta charset='UTF-8'>
+<meta name="robots" content="noindex">
+<link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+<link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+
+
+<style class="cp-pen-styles">::selection {
+  background: #FF5E99;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-size: 11pt;
+  font-family: Inconsolata, monospace;
+  color: white;
+  background-color: black;
+}
+#container {
+  padding: .1em 1.5em 1em 1em;
+}
+#container output {
+  clear: both;
+  width: 100%;
+}
+#container output h3 {
+  margin: 0;
+}
+#container output pre {
+word-wrap: break-word; 
+white-space: normal;
+  margin: 0;
+}
+.input-line {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  clear: both;
+}
+.input-line > div:nth-child(2) {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+.prompt {
+  white-space: nowrap;
+  color: #96b38a;
+  margin-right: 7px;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-orient: vertical;
+  display: box;
+  box-pack: center;
+  box-orient: vertical;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.cmdline {
+  outline: none;
+  background-color: transparent;
+  margin: 0;
+  width: 100%;
+  font: inherit;
+  border: none;
+  color: inherit;
+}
+.ls-files {
+  height: 45px;
+  -webkit-column-width: 100px;
+  -moz-column-width: 100px;
+  -o-column-width: 100px;
+  column-width: 100px;
+}
+
+
+/************************************************************/
+/* SVG Clock                                                */
+/************************************************************/
+
+.clock-container {
+  display: none /*inline-block*/;
+  position: relative;
+  width: 200px;
+  vertical-align: middle;
+  overflow: hidden;
+} 
+
+.clock-container > svg > circle {
+  stroke-width: 2px;
+  stroke: #fff;
+}
+
+.hour, .min, .sec { 
+  stroke-width: 1px;
+  fill: #333;
+  stroke: #555;
+}
+
+.sec {
+   stroke: #f55;
+}
+
+</style></head><body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <title>LINE Console</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata"
+          rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="container">
+      <output></output>
+      <div id="input-line" class="input-line">
+        <div class="prompt"></div><div><input class="cmdline"  /></div>
+      </div>
+    </div>
+    
+    <!--<script src="http://www.codehelper.io/api/ips/?js"></script>-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/cmd.js"></script>
+    
+    <div class="clock-container">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45"/>
+        <g>
+          <rect class="hour" x="47.5" y="12.5" width="5" height="40" rx="2.5" ry="2.55" />
+          <rect class="min" x="48.5" y="12.5" width="3" height="40" rx="2" ry="2"/>
+          <line class="sec" x1="50" y1="50" x2="50" y2="16" />
+        </g>
+      </svg>
+    </div>
+    
+  </body>
+</html>
+<script >$(function() {
+  
+  // Set the command-line prompt to include the user's IP Address
+  //$('.prompt').html('[' + codehelper_ip["IP"] + '@HTML5] # ');
+    $('.prompt').html('[root@LINE] # ');
+
+  // Initialize a new terminal object
+  var term = new Terminal('#input-line .cmdline', '#container output');
+  term.init();
+  
+  // Update the clock every second
+  setInterval(function() {
+    function r(cls, deg) {
+      $('.' + cls).attr('transform', 'rotate('+ deg +' 50 50)')
+    }
+    var d = new Date()
+    r("sec", 6*d.getSeconds())  
+    r("min", 6*d.getMinutes())
+    r("hour", 30*(d.getHours()%12) + d.getMinutes()/2)
+  }, 1000);
+  
+});
+//# sourceURL=pen.js
+</script>
+</body></html>

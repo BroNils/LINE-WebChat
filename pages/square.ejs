@@ -1,0 +1,116 @@
+<!--
+    Author: GoogleX
+	Author link: https://github.com/GoogleX133
+	Design by: W3layouts
+	
+	Email: haxor-133@protonmail.com (optional)
+	Facebook: https://fb.me/m.rakha.f
+	Contact: line://ti/p/~rakamastah
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>LINE WebChat</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="LINE WebChat" />
+		<meta name="generator" content="LINE WebChat" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script><meta name="author" content="GoogleX" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+		<link href='//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<!-- Body -->
+<body>
+
+	<h1>LINE WebChat</h1>
+<input type="hidden" id="myid" value="<%= myid %>">
+	<div class="container">
+
+		<div id="chatbox">
+
+			<div id="friendslist">
+
+				<div id="topmenu">
+					<span class="friends">Square</span>
+				</div>
+
+				<div id="friends">
+                    <%- friends %>
+
+					<div id="search">
+						<input type="text" id="searchfield" value="Search contacts...">
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="chatview" class="p1">
+
+				<div id="profile">
+					<div id="close">
+						<div class="cy"></div>
+						<div class="cx"></div>
+					</div>
+					<p>Bucky Barnes</p>
+					<span>wintersoldier@gmail.com</span>
+				</div>
+
+				<div id="chat-messages">
+
+					<!--<label>Monday 01</label>-->
+
+					<div class="message">
+						<img src="images/winter-soldier.jpg">
+						<div class="bubble">
+							Why are you protecting me?
+							<span>16:00</span>
+						</div>
+					</div>
+					
+					
+                    <div class="message right">
+						<img src="images/captain-america.jpg">
+						<div class="bubble">
+							Coz you're my best friend
+							<span>16:00</span>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="sendmessage">
+					<input type="text" value="Send message...">
+					<button id="send"></button>
+				</div>
+
+			</div>
+			
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<p> Copyright &copy; 2018 LINE Chat Web - Made by GoogleX. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank"> W3layouts </a></p>
+	</div>
+
+
+		<script src="js/jquery.min.js"></script>
+	    <script src="js/square.js"></script>
+		<script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+
+</body>
+<!-- //Body -->
+
+</html>
