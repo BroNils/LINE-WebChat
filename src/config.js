@@ -49,7 +49,7 @@ const config = {
   version: '1.1',
   repo: 'https://github.com/GoogleX133/LINE-WebChat',
   raw_repo: 'https://raw.githubusercontent.com/GoogleX133/LINE-WebChat/master/',
-  port: 80,
+  port: 666,
   revision: 0,
   hostname: hostname(),
   platform: whichPlatform,
