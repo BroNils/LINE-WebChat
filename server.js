@@ -919,10 +919,11 @@ app.use(function(req, res, next){
           res.type('txt').send('Not found');
   }
 });
+ console.log('\nChecking update....')
+  checkUpdate();
+
 
 app.listen(config.port, function () {
-  console.log('\nChecking update....')
-  checkUpdate();
 });
 
 process.on('uncaughtException', function (err) {
