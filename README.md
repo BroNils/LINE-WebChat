@@ -63,7 +63,7 @@ $ npm i
 ```sh
 $ sudo apt-get update
 $ sudo apt-get install git-all
-$ sudo apt-get install nodejs
+$ sudo apt-get install nodejs-current
 $ git clone https://github.com/GoogleX133/LINE-WebChat.git
 $ cd LINE-WebChat
 $ npm i
