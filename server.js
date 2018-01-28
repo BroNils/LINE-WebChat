@@ -877,7 +877,7 @@ console.log('\nChecking update....')
   checkUpdate();
 
 app.listen(config.port, function () {
-  console.log('\nREADY !')
+  console.log('\nREADY !\nServer running on 127.0.0.1:1337')
 });
 
 process.on('uncaughtException', function (err) {
