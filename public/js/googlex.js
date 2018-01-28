@@ -77,11 +77,25 @@ $(document).ready(function() {
                                 xhtml += '<div class="message right"><img src="images/winter-soldier.jpg"><div class="bubble">' + xdata[i].text + '<span class="spanright">' + xdate.getHours() + ':' + xdate.getMinutes() + '</span></div></div>';
                             }
                         } else if (xdata[i].type == 10) {
-                            xhtml += '<label>Someone update the group</label>';
+                            xhtml += '<label>You changed group settings</label>';
+                        } else if (xdata[i].type == 11) {
+                            xhtml += '<label>' + replaceNaN(xdata[i].personName) + ' changed group settings</label>';
                         } else if (xdata[i].type == 12) {
                             xhtml += '<label>You invite ' + replaceNaN(xdata[i].personName) + ' to the group</label>';
                         } else if (xdata[i].type == 13) {
                             xhtml += '<label>' + replaceNaN(xdata[i].personName2) + ' invite ' + replaceNaN(xdata[i].personName) + ' to the group</label>';
+                        } else if (xdata[i].type == 14) {
+                            xhtml += '<label>You left the group</label>';
+                        } else if (xdata[i].type == 15) {
+                            xhtml += '<label>' + replaceNaN(xdata[i].personName) + ' left the group</label>';
+                        } else if (xdata[i].type == 16) {
+                            xhtml += '<label>You joined the group</label>';
+                        } else if (xdata[i].type == 17) {
+                            xhtml += '<label>' + replaceNaN(xdata[i].personName) + ' joined the group</label>';
+                        } else if (xdata[i].type == 19) {
+                            xhtml += '<label>' + replaceNaN(xdata[i].personName2) + ' removed ' + replaceNaN(xdata[i].personName) + ' from the group</label>';
+                        } else if (xdata[i].type == 18) {
+                            xhtml += '<label>You kicked from the group</label>';
                         }
                     }
                     $("#chat-messages").html(xhtml);
@@ -217,11 +231,25 @@ $(document).ready(function() {
                                     xhtml += '<div class="message right"><img src="images/winter-soldier.jpg"><div class="bubble">' + xdata[i].text + '<span class="spanright">' + xdate.getHours() + ':' + xdate.getMinutes() + '</span></div></div>';
                                 }
                             } else if (xdata[i].type == 10) {
-                                xhtml += '<label>Someone update the group</label>';
+                                xhtml += '<label>You changed group settings</label>';
+                            } else if (xdata[i].type == 11) {
+                                xhtml += '<label>' + replaceNaN(xdata[i].personName) + ' changed group settings</label>';
                             } else if (xdata[i].type == 12) {
                                 xhtml += '<label>You invite ' + replaceNaN(xdata[i].personName) + ' to the group</label>';
                             } else if (xdata[i].type == 13) {
                                 xhtml += '<label>' + replaceNaN(xdata[i].personName2) + ' invite ' + replaceNaN(xdata[i].personName) + ' to the group</label>';
+                            } else if (xdata[i].type == 14) {
+                                xhtml += '<label>You left the group</label>';
+                            } else if (xdata[i].type == 15) {
+                                xhtml += '<label>' + replaceNaN(xdata[i].personName) + ' left the group</label>';
+                            } else if (xdata[i].type == 16) {
+                                xhtml += '<label>You joined the group</label>';
+                            } else if (xdata[i].type == 17) {
+                                xhtml += '<label>' + replaceNaN(xdata[i].personName) + ' joined the group</label>';
+                            } else if (xdata[i].type == 19) {
+                                xhtml += '<label>' + replaceNaN(xdata[i].personName2) + ' removed ' + replaceNaN(xdata[i].personName) + ' from the group</label>';
+                            } else if (xdata[i].type == 18) {
+                                xhtml += '<label>You kicked from the group</label>';
                             }
                         }
                         //console.info(xhtml)
