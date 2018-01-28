@@ -77,7 +77,7 @@ function ambilKata(params, kata1, kata2){
 function checkUpdate(){
 	unirest.get(config.raw_repo+'version.txt').end(function(data){
 		if(config.version != parseFloat(data.body)){
-			console.info('There are new version of LINE WebChat here -> '+config.repo+' ('+parseFloat(data.body)+')')
+			console.info('There are new version of LINE WebChat \n-> '+config.repo+' ('+parseFloat(data.body)+')')
 		}else{
 			console.info('You are currently using the latest version ! ^_^')
 		}
@@ -401,18 +401,12 @@ function toAscii(src,callback) {
 	}
 	
 	callback(src);
-	
-	/*setTimeout(function(){
-		//console.info(src);
-        callback(src);
-	},5000);*/
 }
 
 function addDislayName(src,callback){
 	Tcustom.talkservice.getContact(src.message._from,(err,success)=>{
 		src.message.displayName = replaceUnicode(unicodeEscape(success.displayName));
 		src.message.picturePath = config.LINE_DL_PROFILE+success.picturePath;
-	    //src.message.displayName = success.displayName;
 		callback(src);
 	})
 }
@@ -421,15 +415,11 @@ function rebuildChat(xdomain,callback){
 	let xrevision;
 	if (fs.existsSync(path.resolve('./data/revision.json'))) {
 	    fs.readFile('./data/revision.json', function read(err, data) {
-          //console.log(response.body);
-	      xrevision = JSON.parse(data);
-		  //console.info(xrevision.revision);
+	      xrevision = JSON.parse(data
 	      Tcustom.talkservice.fetchOps(xrevision.revision,10,0,0,(err,success)=>{
-			  console.info(err);
 		      for(var i = 0; i < success.length;i++){
 				  if(success[i].type == 25 || success[i].type == 26){
 				  toAscii(success[i],(retx)=>{
-					  //arrangeOp(xdomain,retx);
 					  addDislayName(retx,(resultx)=>{
 						  arrangeOp(xdomain,resultx);
 					  })
@@ -489,17 +479,15 @@ function arrangeOp(xdomain,operations){
 				console.info("saved");
 			})
 		}
-	}else if(operations.type == 11 || operations.type == 13 || operations.type == 65 || operations.type == 17 || operations.type == 32){
+	}else if(operations.type == 13 || operations.type == 65 || operations.type == 32 || operations.type == 19){
 		msg = new TTypes.Message();
 		msg.type = operations.type;
 		msg.person = operations.param2;
 		msg.person2 = operations.param3;
-		console.info(operations.type+msg.person+msg.person2);
-		//let xarr = new Array();
 		if(msg.person && msg.person2 && msg.person != null && msg.person2 != null){
 		Tcustom.talkservice.getContacts([msg.person,msg.person2],(err,s)=>{
-			msg.personName = unicodeEscape(s[0].displayName);
-			msg.personName2 = unicodeEscape(s[1].displayName);
+			msg.personName = replaceUnicode(unicodeEscape(s[0].displayName));
+			msg.personName2 = replaceUnicode(unicodeEscape(s[1].displayName));
 			msg.id = parseInt(operations.revision);
 			msg.to = operations.param1;
 			id = msg.id;
@@ -529,13 +517,13 @@ function arrangeOp(xdomain,operations){
 				})
 			}
 		})}
-	}else if(operations.type == 60 || operations.type == 15 || operations.type == 17){
+	}else if(operations.type == 11 || operations.type == 60 || operations.type == 15 || operations.type == 17){
 		msg = new TTypes.Message();
 		msg.type = operations.type;
 		msg.person = operations.param2;
 		msg.person2 = operations.param3;
 		Tcustom.talkservice.getContact(msg.person,(err,s)=>{
-			msg.personName = unicodeEscape(s.displayName);
+			msg.personName = replaceUnicode(unicodeEscape(s.displayName));
 			msg.id = parseInt(operations.revision);
 			msg.to = operations.param1;
 			id = msg.id;
@@ -565,7 +553,7 @@ function arrangeOp(xdomain,operations){
 				})
 			}
 		})
-	}else if(operations.type == 12 || operations.type == 64 || operations.type == 16 || operations.type == 31 || operations.type == 10){
+	}else if(operations.type == 18 || operations.type == 14 || operations.type == 12 || operations.type == 64 || operations.type == 16 || operations.type == 31 || operations.type == 10){
 		msg = new TTypes.Message();
 		msg.type = operations.type;
 		msg.person = operations.param2;
@@ -658,25 +646,6 @@ app.use(session({secret: 'lineweb'}));
 app.set('views', 'pages');
 app.set('view engine', 'ejs');
 
-/*app.get('/tes', function (req, res) {
-  let cache = [];
-JSON.stringify(res, function(key, value) {
-    if (typeof value === 'object' && value !== null) {
-        if (cache.indexOf(value) !== -1) {
-            // Circular reference found, discard key
-            return;
-        }
-        // Store value in our collection
-        cache.push(value);
-    }
-    return value;
-});
-//console.log(cache);
-unirest.get('http://'+req.headers.host+'/groups.json').end(function (response) {
-      console.log(response.body);
-    })
-});*/
-
 app.get('/', function (req, res) {
   xsess = req.session;
   if(xsess.isLoggedIn === true){
@@ -690,21 +659,6 @@ app.get('/', function (req, res) {
     res.redirect('/login/qr');
   }
 });
-
-/* Soon
-app.get('/square', function (req, res) {
-	xsess = req.session;
-    if(xsess.isLoggedIn === true){
-	    renewSquareList(()=>{
-            buildHTMLFriends(req.headers.host,'squares',(xret)=>{
-		  	    console.info("Mid->"+profile.myid);
-			    res.render('square',{friends: xret,myid: profile.myid});
-		    })
-	    })
-    }else{
-      res.redirect('/login/qr');
-    }
-});*/
 
 app.get('/console', function (req, res) {
 	res.render('terminal');
@@ -802,7 +756,6 @@ app.post('/confirmlogin/:types', function (req, res) {
 								xsess.picturePath = success.picturePath;
 								profile.mypic = success.picturePath;
 								res.redirect('/');
-								//setTimeout(function(){res.redirect('/');},7000);
 							})
 							//res.redirect('/');
 						}else{res.send("Could not connect thrift");}
@@ -919,11 +872,12 @@ app.use(function(req, res, next){
           res.type('txt').send('Not found');
   }
 });
- console.log('\nChecking update....')
+
+console.log('\nChecking update....')
   checkUpdate();
 
-
 app.listen(config.port, function () {
+  console.log('\nREADY !')
 });
 
 process.on('uncaughtException', function (err) {
