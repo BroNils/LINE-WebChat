@@ -415,7 +415,7 @@ function rebuildChat(xdomain,callback){
 	let xrevision;
 	if (fs.existsSync(path.resolve('./data/revision.json'))) {
 	    fs.readFile('./data/revision.json', function read(err, data) {
-	      xrevision = JSON.parse(data
+	      xrevision = JSON.parse(data);
 	      Tcustom.talkservice.fetchOps(xrevision.revision,10,0,0,(err,success)=>{
 		      for(var i = 0; i < success.length;i++){
 				  if(success[i].type == 25 || success[i].type == 26){
