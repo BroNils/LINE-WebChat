@@ -71,6 +71,12 @@ $ npm i
 
 ## How to run
 
+You can run with<br>
+```sh
+$ npm start
+```
+<br>Or<br>
+
 - On windows you just open *start.bat*.
 - On linux you just open *start.sh*.
 
