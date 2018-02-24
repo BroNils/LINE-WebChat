@@ -225,6 +225,7 @@ function doTalkServiceGET(xfunc,xparams,xlength,xtype = 'JSON.stringify',xservic
 				    eval(`Tcustom.${xservice}[xfunc]((err,success)=>{
 						if(err){callback(err)}else{callback(${xtype}(success))}
 					})`);
+				break;
 				case 1:
 				    eval(`Tcustom.${xservice}[xfunc](xparams[0],(err,success)=>{
 						if(err){callback(err)}else{callback(${xtype}(success))}
